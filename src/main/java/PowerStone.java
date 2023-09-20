@@ -1,5 +1,19 @@
 public class PowerStone implements IStone{
   public static final double MULTIPLIER = 150.5;
+
+  private static PowerStone powerStone = null;
+
+  private PowerStone(){
+
+  }
+
+  public static PowerStone getPowerStone(){
+    if(powerStone == null){
+      powerStone = new PowerStone();
+    }
+    return powerStone;
+  }
+
   /**
    * use the multiplier to increase the Persons power
    */

@@ -8,6 +8,7 @@ public class Person {
   private Double power = 100.0;
   private String location;
 
+
   public Person(String name) {
     this.name = name;
   }
@@ -35,4 +36,12 @@ public class Person {
   public void setLocation(String location) {
     this.location = location;
   }
+
+  @Override
+  public String toString() {
+    return "Person{" +
+        "name='" + name + '\'' +
+        '}';
+  }
+
 }

@@ -11,7 +11,7 @@ class PowerStoneTest {
   @BeforeEach
   void setUp() {
     testPerson = new Person("Roberta the tester");
-    powerStone = new PowerStone();
+    powerStone = PowerStone.getPowerStone();
   }
 
   @AfterEach
@@ -31,5 +31,10 @@ class PowerStoneTest {
 
   @Test
   void deactivate() {
+    double currentPower = testPerson.getPower();
+    assertEquals(currentPower,testPerson.getPower());
+    currentPower = currentPower / PowerStone.MULTIPLIER;
+    powerStone.deactivate(testPerson);
+    assertEquals(currentPower,testPerson.getPower());
   }
 }
