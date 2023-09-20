@@ -1,6 +1,13 @@
+/**
+ * @author Drew Clinkenbeard
+ * @since 20 - Sept - 2023
+ *
+ * This represents a command interface.
+ *
+ */
 public interface IStone {
-  void activate();
+  void activate(Person person);
 
-  void deactivate();
+  void deactivate(Person person);
 
 }
